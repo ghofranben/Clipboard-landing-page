@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+:root{
+/*...........font............*/
+   --font-family:'Bai Jamjuree',sans-serif;
+   --font-size:18px;
+   --font-weight-normal:400;
+   --font-weight-bold:600;
+/*..........colors.......... 
+ Primary: */
+   --Strong-Cyan: hsl(171, 66%, 44%);
+   --Light-Blue: hsl(233, 100%, 69%);
+/*Neutral:*/
+   --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+   --Grayish-Blue: hsl(201, 11%, 66%);
+}
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+  }
+
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+/*.........header............*/
+  header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/bg-header-desktop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+  }
+  header .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  header .container img {
+    width: 100px;
+  }
+  header .container h1 {
+    font-size: 45px;
+    font-weight: var(--font-weight-bold);
+    color: var(--Dark-Grayish-Blue);
+  }
+  header .container p {
+    font-size: 20px;
+    color: var(--Grayish-Blue);
+  }
+  header .container .button {
+    width: 36%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -30px;
+  }
+
+  @media (max-width: 1024px) {
+    header .container .button {
+      flex-direction: column;
+      margin-top: 5%;
+    }
+}
+  header .container .button .btn {
+    width: 48%;
+    border: none;
+    padding: 18px;
+    border-radius: 25px;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  @media (max-width: 1024px) {
+    header .container .button .btn {
+      width:200%;
+    }
+  }
+  header .container .button .btn:hover {
+    transform: scale(1.1);
+  }
+  header .container .button .btn-ios {
+    background-color: var(--Strong-Cyan);
+    box-shadow: 5px 5px 5px var(--Strong-Cyan);
+  }
+  header .container .button .btn-mac {
+    background-color: var(--Light-Blue);
+    box-shadow: 5px 5px 5px var(--Light-Blue);
+  }
+/*end header..*/
+/*start snippets*/
+  .heading {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .heading h2 {
+    color: var(--Dark-Grayish-Blue);
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: var(--font-weight-bold);
+  }
+  .heading p {
+    color: var(--Grayish-Blue);
+  }
+  .snippets {
+    padding: 50px 0;
+  }
+  .snippets .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (max-width: 1024px) {
+    .snippets .row {
+      flex-direction: column;
+    }
+  }
+  .snippets .row .image {
+    width: 50%;
+    height: 500px;
+  }
+  @media (max-width: 1024px) {
+    .snippets .row .image {
+      height: unset;
+      margin-bottom: 15px;
+    }
+  }
+  .snippets .row .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    left: -15px;
+  }
+  @media (max-width: 1024px) {
+    .snippets .row .image img {
+      position: unset;
+    }
+  }
+  .snippets .row .text {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+  }
+  @media (max-width: 1024px) {
+    .snippets .row .text {
+      width: 100%;
+      height: unset;
+      padding: 0 15px;
+      text-align: center;
+    }
+  }
+  .snippets .row .text li {
+    padding-right: 15px;
+    margin-bottom: 20px;
+  }
+  .snippets .row .text li h3 {
+    color: var(--Dark-Grayish-Blue);
+    margin-bottom: 10px;
+    font-weight: var(--font-weight-bold);
+  }
+  .snippets .row .text li p {
+    color: var(--Grayish-Blue);
+  }
+  /*end snippets*/
+  /*start gallery*/
+  .gallery {
+    padding: 50px 0;
+  }
+  .gallery .image {
+    text-align: center;
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 80px;
+  }
+  @media (max-width: 1024px) {
+    .gallery .image {
+      width: 350px;
+    }
+  }
+  .gallery .image img {
+    width: 100%;
+    max-width: 100%;
+  }
+  /* End gallery */
+  /* Start workflow */
+  .workflow {
+    padding: 50px 0;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .workflow .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 1024px) {
+    .workflow .container {
+      justify-content: center;
+    }
+  }
+  .workflow .container .box {
+    text-align: center;
+    width: 430px;
+    height: 250px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .workflow .container .box img {
+    height: 30%;
+  }
+  .workflow .container .box h3 {
+    height: 10%;
+    color: var(--Dark-Grayish-Blue);
+    font-weight: var(--font-weight-bold);
+  }
+  .workflow .container .box p {
+    height: 40%;
+    color: var(--Grayish-Blue);
+  }
+  /* End workflow */
+  /* Start logo */
+  .logo {
+    padding: 50px 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .logo .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 1024px) {
+    .logo .container {
+      flex-direction: column;
+      height: 800px;
+    }
+  }
+  .logo .container img {
+    width: 165px;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  /* End logo*/
+  /* Start adding */
+  .adding {
+    padding: 50px 0;
+  }
+  .adding .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .adding .container img {
+    width: 100px;
+  }
+  .adding .container h1 {
+    font-size: 45px;
+    color: var(--Dark-Grayish-Blue);
+    font-weight: var(--font-weight-bold);
+  }
+  .adding .container p {
+    color: var(--Grayish-Blue);
+    margin: 20px 0;
+  }
+  .adding .container .button {
+    width: 36%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (max-width: 1024px) {
+    .adding .container .button {
+      flex-direction: column;
+      margin-top: 5%;
+    }
+  }
+  .adding .container .button .btn {
+    width: 48%;
+    border: none;
+    padding: 20px;
+    border-radius: 25px;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  @media (max-width: 1024px) {
+    .adding .container .button .btn {
+      width: 200%;
+    }
+  }
+  .adding .container .button .btn:hover {
+    transform: scale(1.1);
+  }
+  .adding .container .button .btn-ios {
+    background-color: var(--Strong-Cyan);
+    box-shadow: 5px 5px 5px var(--Strong-Cyan);
+  }
+  .adding .container .button .btn-mac {
+    background-color: var(--Light-Blue);
+    box-shadow: 5px 5px 5px var(--Light-Blue);
+  }
+  /* End adding */
+  /* Start footer...*/
+footer {
+    background-color: hsl(220, 18%, 97%);
+    height: 150px;
+}
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--Dark-Grayish-Blue);
+}
+.footer-logo {
+    width: 70px;
+    margin-top: 40px;
+}
+.footer-actions {
+    margin-top: 35px;
+    font-size: var(--font-size);
+    display: flex;
+    gap: 100px;
+   
+}
+.footer-actions >div >a {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    color: var(--Grayish-Blue);
+}
+.socials{
+    margin-top: 35px;
+    display: flex;
+    gap: 20px;
+    padding-left: 200px;
+}
+@media (max-width: 1024px)  {
+footer {
+    height: 500px;
+}
+.footer{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.footer-actions {
+    flex-direction: column;
+    gap: 30px;
+}
+.socials {
+    padding-left: 0;
+}
+}
+/*End footer*/
